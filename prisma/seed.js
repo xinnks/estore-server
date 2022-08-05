@@ -83,7 +83,7 @@ const categoryData = [
 async function main() {
   console.log(`Start seeding ...`)
   for (const cat of categoryData) {
-    const category = await prisma.category.create({
+    const category = await prisma.categories.create({
       data: cat,
     })
     console.log(`Created category with id: ${category.id}`)
