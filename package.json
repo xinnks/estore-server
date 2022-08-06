@@ -10,6 +10,7 @@
     "prisma:init": "pnpm dlx prisma migrate dev --name init",
     "serve": "nodemon"
   },
+  "license": "Apache-2.0",
   "dependencies": {
     "@prisma/client": "^4.1.1",
     "express": "4.18.1",
