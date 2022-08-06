@@ -2,11 +2,25 @@
   "name": "estore-api",
   "version": "1.0.0",
   "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "concurrently \"pnpm lint\" \"pnpm format\" \"pnpm serve\"",
+    "format": "prettier . --write",
+    "lint": "eslint --ext .js --ignore-path .gitignore --fix src",
+    "prisma:init": "pnpm dlx prisma migrate dev --name init",
+    "serve": "nodemon"
+  },
   "dependencies": {
     "@prisma/client": "^4.1.1",
-    "express": "4.18.1"
+    "express": "4.18.1",
+    "nodemon": "^2.0.18"
   },
   "devDependencies": {
+    "concurrently": "^7.2.2",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
     "prisma": "^4.1.1"
   },
   "prisma": {
